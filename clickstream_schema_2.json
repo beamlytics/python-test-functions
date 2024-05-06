@@ -1,0 +1,35 @@
+{
+    "uid": 79,
+    "sessionId": "e8302c87-1f5e-4586-94f3-bf101de695ca",
+    "returning": false,
+    "lat": 39.668878,
+    "lng": -80.311289,
+    "agent": "Mozilla/5.0 (Linux; Android 13; SM-S901B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Mobile Safari/537.36",
+    "event": "view_item",
+    "transaction": false,
+    "timestamp": 808652365000,
+    "ecommerce": {
+        "items": [
+            {
+                "item_name": "MODARUE dollartree Men's Casual, Polyester Gymwear, Stretchable, Sleeveless Vest I Solid Pattern Sleeveless Skull Print Gy...",
+                "item_id": 286214,
+                "price": NaN,
+                "item_brand": "Amazon",
+                "item_category": "Products",
+                "item_category_2": "men's clothing",
+                "item_category_3": "Innerwear",
+                "item_category_4": "Products",
+                "item_variant": "Blue",
+                "item_list_name": "MODARUE dollartree Men's Casual, Polyester Gymwear, Stretchable, Sleeveless Vest I Solid Pattern Sleeveless Skull Print Gy...",
+                "item_list_id": "SR286214",
+                "index": 286214,
+                "quantity": 1
+            }
+        ]
+    },
+    "user_id": 74528,
+    "client_id": 52393610,
+    "page_previous": "null",
+    "page": "P_99",
+    "event_datetime": "2009-02-04 00:00:00"
+}

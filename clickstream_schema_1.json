@@ -1,0 +1,35 @@
+{
+    "uid": 49,
+    "sessionId": "56f722d6-73c3-4a44-80d6-1e52e22e789e",
+    "returning": true,
+    "lat": 39.669245,
+    "lng": -80.315369,
+    "agent": "Mozilla/5.0 (iPad; CPU OS 12_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148",
+    "event": "add-to-cart",
+    "transaction": false,
+    "timestamp": 296802522000,
+    "ecommerce": {
+        "items": [
+            {
+                "item_name": "GoSriKi Women's Cotton Blend Printed Straight Kurta with Pant & Dupatta (Itta-GO)",
+                "item_id": 143547,
+                "price": "\u20b92,599",
+                "item_brand": "Amazon",
+                "item_category": "Products",
+                "item_category_2": "women's clothing",
+                "item_category_3": "Ethnic Wear",
+                "item_category_4": "Products",
+                "item_variant": "White",
+                "item_list_name": "GoSriKi Women's Cotton Blend Printed Straight Kurta with Pant & Dupatta (Itta-GO)",
+                "item_list_id": "SR143547",
+                "index": 143547,
+                "quantity": 3
+            }
+        ]
+    },
+    "user_id": 74861,
+    "client_id": 52393600,
+    "page_previous": "null",
+    "page": "P_67",
+    "event_datetime": "2005-10-15 00:00:00"
+}
