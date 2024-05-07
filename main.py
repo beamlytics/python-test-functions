@@ -13,9 +13,9 @@ df = pd.read_csv("Amazon-Products.csv")
 
 f = Faker(["en_UK"])
 
-# Replace with your project ID
+
 project_id = "retail-pipeline-beamlytics"
-# Replace with your desired topic name
+
 topic_name = "python-test-functions"
 
 def publish_message(publisher, topic_path, data):
@@ -172,7 +172,7 @@ publisher = pubsub.PublisherClient()
 topic_path = publisher.topic_path(project_id, topic_name)
 
 # Loop to generate and publish data
-for _ in range(10):  # Adjust the number of messages to publish
+for _ in range(100):  # Adjust the number of messages to publish
   data_type = random.choice(["clickstream", "inventory", "transaction"])
   if data_type == "clickstream":
     data = f.clickstream_data()
