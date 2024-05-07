@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+
+
 from faker import Faker
 import random
 from faker.providers import BaseProvider
