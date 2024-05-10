@@ -6,8 +6,8 @@ import datetime
 import pandas as pd
 import json
 from google.cloud import pubsub_v1
-from typing import Callable
-from concurrent import futures
+
+
 
 
 df = pd.read_csv("Amazon-Products.csv")
@@ -15,9 +15,8 @@ df = pd.read_csv("Amazon-Products.csv")
 
 f = Faker(["en_UK"])
 
-# Replace with your project ID
+
 project_id = "retail-pipeline-beamlytics"
-# Replace with your desired topic name
 topic_id = "python-test-functions"
 
 
@@ -160,38 +159,39 @@ def write_dict_to_json(data, filename):
 
 
 f.add_provider(StreamProvider)
-
-"""Publishes multiple messages to a Pub/Sub topic with an error handler."""
-
-
-
-
 publisher = pubsub_v1.PublisherClient()
 topic_path = publisher.topic_path(project_id, topic_id)
-publish_futures = []
 
-def get_callback(
-    publish_future: pubsub_v1.publisher.futures.Future, data: str
-) -> Callable[[pubsub_v1.publisher.futures.Future], None]:
-    def callback(publish_future: pubsub_v1.publisher.futures.Future) -> None:
+def get_data(data_type):
+    """Fetches data based on the specified data type."""
+    if data_type == "clickstream":
+        return f.clickstream_data()
+    elif data_type == "inventory":
+        return f.inventoryschema_data()
+    elif data_type == "transaction":
+        return f.transactionschema_data()
+    else:
+        raise ValueError(f"Invalid data type: {data_type}")
+
+def publish_message(publisher, topic_path, data):
+    """Publishes a message to the specified topic."""
+    data_bytes = data.encode("utf-8")
+    future = publisher.publish(topic_path, data_bytes)
+    return future.result()  # Wait for the message to be published
+
+def main(data_type):
+    """Main loop that publishes data to Pub/Sub, receiving the data type as an argument."""
+    data = get_data(data_type)
+
+    # Implement your logic to determine when to publish data
+    if should_publish(data_type, data):  # Replace with your publishing criteria
         try:
-            # Wait 60 seconds for the publish call to succeed.
-            print(publish_future.result(timeout=60))
-        except futures.TimeoutError:
-            print(f"Publishing {data} timed out.")
+            publish_message(publisher, topic_path, data)
+            print(f"Published {data_type} data to {topic_path}.")
+        except Exception as e:
+            print(f"Error publishing message: {e}")
 
-    return callback
-
-for i in range(10):
-    data = str(i)
-    # When you publish a message, the client returns a future.
-    publish_future = publisher.publish(topic_path, data.encode("utf-8"))
-    # Non-blocking. Publish failures are handled in the callback function.
-    publish_future.add_done_callback(get_callback(publish_future, data))
-    publish_futures.append(publish_future)
-
-# Wait for all the publish futures to resolve before exiting.
-futures.wait(publish_futures, return_when=futures.ALL_COMPLETED)
-
-print(f"Published messages with error handler to {topic_path}.")
+if __name__ == "__main__":
+    chosen_data_type = random.choice(["clickstream", "inventory", "transaction"])
+    main(chosen_data_type)
 
