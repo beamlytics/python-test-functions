@@ -1,0 +1,28 @@
+<<<<<<< HEAD
+{
+    "count": 71,
+    "sku": 10272,
+    "aisleID": 46,
+    "product_name_choices": "women's clothing",
+    "departmentId": 49,
+    "price": "\u20b9999",
+    "recipeID": "Null",
+    "image": "https://m.media-amazon.com/images/I/51WOdhQ0rAL._AC_UL320_.jpg",
+    "timestamp": "1270540031000",
+    "store_id": 6,
+    "product_id": 10322
+=======
+{
+    "count": 74,
+    "sku": 10244,
+    "aisleID": 31,
+    "product_name_choices": "beauty & health",
+    "departmentId": 82,
+    "price": "\u20b9999",
+    "recipeID": "Null",
+    "image": "https://m.media-amazon.com/images/I/51qZZCW1IBL._AC_UL320_.jpg",
+    "timestamp": "1228879413000",
+    "store_id": 3,
+    "prodduct_id": 10083
+>>>>>>> 1f75b527ee780661897348133b4533d1b313e043
+}

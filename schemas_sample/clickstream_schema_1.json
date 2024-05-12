@@ -1,0 +1,72 @@
+<<<<<<< HEAD
+{
+    "uid": 94,
+    "sessionId": "null",
+    "returning": false,
+    "lat": -33.8688,
+    "lng": 151.2093,
+    "agent": "Mozilla/5.0 (Windows Phone 10.0; Android 6.0.1; Microsoft; RM-1152) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Mobile Safari/537.36 Edge/15.15254",
+    "event": "purchase",
+    "transaction": true,
+    "timestamp": 1137888430000,
+    "ecommerce": {
+        "items": [
+            {
+                "item_name": "FUMUZZA Women's PU Leather Stylish and Trending Backpack for College Office Travel Anti Theft Backpack Purse for Women and...",
+                "item_id": 39713,
+                "price": "\u20b91,999",
+                "item_brand": "Amazon",
+                "item_category": "Products",
+                "item_category_2": "accessories",
+                "item_category_3": "Bags & Luggage",
+                "item_category_4": "Products",
+                "item_variant": "Blue",
+                "item_list_name": "FUMUZZA Women's PU Leather Stylish and Trending Backpack for College Office Travel Anti Theft Backpack Purse for Women and...",
+                "item_list_id": "SR39713",
+                "index": 39713,
+                "quantity": 1
+            }
+        ]
+    },
+    "user_id": 74608,
+    "client_id": 52393587,
+    "page_previous": "null",
+    "page": "P_10",
+    "event_datetime": "1995-07-28 00:00:00"
+=======
+{
+    "uid": 49,
+    "sessionId": "56f722d6-73c3-4a44-80d6-1e52e22e789e",
+    "returning": true,
+    "lat": 39.669245,
+    "lng": -80.315369,
+    "agent": "Mozilla/5.0 (iPad; CPU OS 12_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148",
+    "event": "add-to-cart",
+    "transaction": false,
+    "timestamp": 296802522000,
+    "ecommerce": {
+        "items": [
+            {
+                "item_name": "GoSriKi Women's Cotton Blend Printed Straight Kurta with Pant & Dupatta (Itta-GO)",
+                "item_id": 143547,
+                "price": "\u20b92,599",
+                "item_brand": "Amazon",
+                "item_category": "Products",
+                "item_category_2": "women's clothing",
+                "item_category_3": "Ethnic Wear",
+                "item_category_4": "Products",
+                "item_variant": "White",
+                "item_list_name": "GoSriKi Women's Cotton Blend Printed Straight Kurta with Pant & Dupatta (Itta-GO)",
+                "item_list_id": "SR143547",
+                "index": 143547,
+                "quantity": 3
+            }
+        ]
+    },
+    "user_id": 74861,
+    "client_id": 52393600,
+    "page_previous": "null",
+    "page": "P_67",
+    "event_datetime": "2005-10-15 00:00:00"
+>>>>>>> 1f75b527ee780661897348133b4533d1b313e043
+}

@@ -1,0 +1,86 @@
+<<<<<<< HEAD
+{
+    "order_number": "b27c7a07-f1b3-4202-9bc7-aa28775f27d8",
+    "user_id": 74706,
+    "store_id": 48,
+    "returning": true,
+    "time_of_sale": 11,
+    "department_id": 3,
+    "product_id": 5,
+    "product_count": 5,
+    "price": 3538,
+    "order_id": "bc12a1c2-d87a-42cc-ad83-e880326e6ba3",
+    "order_dow": 1,
+    "order_hour_of_day": 2,
+    "order_woy": 3,
+    "product_name": "Ralli's Bubblegum Syrup 500ml.",
+    "product_sku": 48,
+    "image": "https://m.media-amazon.com/images/I/61Kp8gi7yUL._AC_UL320_.jpg",
+    "timestamp": "242687367000",
+    "ecommerce": {
+        "items": [
+            {
+                "item_name": "Ralli's Bubblegum Syrup 500ml.",
+                "item_id": 123989,
+                "price": "\u20b9199",
+                "item_brand": "Amazon",
+                "item_category": "Products",
+                "item_category_2": "grocery & gourmet foods",
+                "item_category_3": "Coffee, Tea & Beverages",
+                "item_category_4": "Products",
+                "item_variant": "Black",
+                "item_list_name": "Ralli's Bubblegum Syrup 500ml.",
+                "item_list_id": "SR123989",
+                "index": 123989,
+                "quantity": 1
+            }
+        ]
+    },
+    "client_id": 52393619,
+    "page_previous": "null",
+    "page": "P_43",
+    "event_datetime": "1993-09-21 00:00:00"
+=======
+{
+    "order_number": "f52c7681-579b-4843-bc94-e4942d8f892b",
+    "user_id": 74803,
+    "store_id": 15,
+    "returning": false,
+    "time_of_sale": 15,
+    "department_id": 10,
+    "product_id": 15,
+    "product_count": 4,
+    "price": 1355,
+    "order_id": "3bfcdeca-9df9-44a3-8421-5159cbd3404a",
+    "order_dow": 7,
+    "order_hour_of_day": 14,
+    "order_woy": 49,
+    "product_name": "JOHN PRIDE Plus Size Men Long Sleeves Floral Printed Off White Linen Casual Shirt",
+    "product_sku": 8,
+    "image": "https://m.media-amazon.com/images/I/71EbkaLW0wL._AC_UL320_.jpg",
+    "timestamp": "1583971968000",
+    "ecommerce": {
+        "items": [
+            {
+                "item_name": "JOHN PRIDE Plus Size Men Long Sleeves Floral Printed Off White Linen Casual Shirt",
+                "item_id": 424775,
+                "price": "\u20b92,399",
+                "item_brand": "Amazon",
+                "item_category": "Products",
+                "item_category_2": "men's clothing",
+                "item_category_3": "Shirts",
+                "item_category_4": "Products",
+                "item_variant": "White",
+                "item_list_name": "JOHN PRIDE Plus Size Men Long Sleeves Floral Printed Off White Linen Casual Shirt",
+                "item_list_id": "SR424775",
+                "index": 424775,
+                "quantity": 3
+            }
+        ]
+    },
+    "client_id": 52393615,
+    "page_previous": "P_52",
+    "page": "P_51",
+    "event_datetime": "2020-02-13 00:00:00"
+>>>>>>> 1f75b527ee780661897348133b4533d1b313e043
+}
