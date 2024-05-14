@@ -1,0 +1,72 @@
+{
+    "uid": 50,
+    "sessionId": "28d19adc-e367-42d1-9c13-91d892b8c479",
+    "returning": true, 
+    "lat": 34.0522, 
+    "lng": -118.2437, 
+    "agent": "Mozilla/5.0",
+    "event": "browse", 
+    "transaction": false, 
+    "timestamp": 1292288960000, 
+    "ecommerce": {
+            "items": [
+            {
+                "item_name": "MINI", 
+                "item_id": 30827, 
+                "price": "₹1,499", 
+                "item_brand": "Amazon", 
+                "item_category": "Products", 
+                "item_category_2": "kids", 
+                "item_category_3": "Baby", 
+                "item_category_4": "Products", 
+                "item_variant": "White", 
+                "item_list_name": "MINI",
+                "item_list_id": "SR30827", 
+                "index": 30827, 
+                "quantity": 2
+            }
+        ]
+    }, 
+    "user_id": 74690, 
+    "client_id": "52393600", 
+    "page_previous": "P_3", 
+    "page": "P_8", 
+    "event_datetime": "2024-05-05 12:26:37"
+}
+
+
+{
+    "uid": 464670,
+    "sessionId": 124,
+    "returning": false,
+    "lat": 39.669082,
+    "lng": -80.312306,
+    "agent": "ttt",
+    "event": "add-to-cart",
+    "transaction": false,
+    "timestamp": 1660091197071,
+    "ecommerce": {
+        "items": [
+            {
+                "item_name": "Donut Friday Scented T-Shirt",
+                "item_id": "67890",
+                "price": 33.75,
+                "item_brand": "Google",
+                "item_category": "Apparel",
+                "item_category_2": "Mens",
+                "item_category_3": "Shirts",
+                "item_category_4": "Tshirts",
+                "item_variant": "Black",
+                "item_list_name": "Search Results",
+                "item_list_id": "SR123",
+                "index": 1,
+                "quantity": 2
+            }
+        ]
+    },
+    "user_id": 74378,
+    "client_id": "52393559",
+    "page_previous": "P_3",
+    "page": "P_3",
+    "event_datetime": "2024-05-05 12:26:37"
+}

@@ -11,7 +11,7 @@ from google.cloud import pubsub_v1
 df = pd.read_csv("Amazon-Products.csv")
 
 
-f = Faker(["en_UK"])
+f = Faker(["en_US"])
 
 # Replace with your project ID
 project_id = "retail-pipeline-beamlytics"
@@ -73,18 +73,20 @@ class StreamProvider(BaseProvider):
                     "item_category_4": df["item_category_4"].iloc[random_index],
                     "item_variant": random.choice(["Black", "White", "Blue"]),  # Random variant
                     "item_list_name": df["item_name"].iloc[random_index],
-                    "item_list_id": "SR"+str(random_index),
+                    "item_list_id": "SR"+str(random_index),s
                     "index": random_index,
                     "quantity": random.randint(1, 3)  # Random quantity between 1 and   3
                 }]
             },
             "user_id": random.randint(74378, 74378 + 599),  # Random user ID from a pool of 600
-            "client_id": random.randint(52393559, 52393559 + 99),  # Random client ID from a pool of 500-600
+            "client_id": str(random.randint(52393559, 52393559 + 99)),  # Random client ID from a pool of 500-600
             "page_previous": random.choice(["null",f"P_{random.randint(1, 10)}"]),  # Random previous page (P1-P10)
             "page": random.choice([f"P_{random.randint(1, 10)}"]),
             "event_datetime":(int(datetime.datetime.strptime("2023-11-21", "%Y-%m-%d").timestamp())*1000)
             #"event_datetime": str(datetime.datetime.strptime(f.date("%Y-%m-%d"), "%Y-%m-%d"))
         }
+    
+    ##return transaction data
     def transactionschema_data(self):
         random_index = random.randint(0, len(df) - 1)
 
@@ -131,6 +133,7 @@ class StreamProvider(BaseProvider):
             "event_datetime": str(datetime.datetime.strptime(f.date("%Y-%m-%d"), "%Y-%m-%d"))
     }
 
+    #return inventory data
     def inventoryschema_data(self):
         random_index = random.randint(0, len(df) - 1)
         return{
@@ -188,9 +191,9 @@ def publish_message(publisher, topic_path, data):
 def main(topic_id,topic_path):
     """Main loop that publishes data to Pub/Sub, receiving the data type as an argument."""
     try:
-        for i in range(1,500):
+        for i in range(1,2):
           data = get_data(topic_id)
-          publish_message(publisher, topic_path, data)
+          #publish_message(publisher, topic_path, data)
           print(f"Published {topic_id} data to {topic_path}.")
     except Exception as e:
         print(f"Error publishing message: {e}")
