@@ -1,87 +1,27 @@
 {
-    "order_number": "f947e691-cdd4-40b3-94b4-0d07cdedf728",
-    "user_id": 74405,
-    "store_id": 4,
-    "returning": true,
-    "time_of_sale": 1,
-    "department_id": 5,
-    "product_id": 22,
-    "product_count": 1,
-    "price": 439,
-    "order_id": "b1756ed2-482f-4d35-ae3d-c182651a7420",
-    "order_dow": 6,
-    "order_hour_of_day": 22,
-    "order_woy": 44,
-    "product_name": "Samsung Galaxy S21 FE 5G (Lavender, 8GB, 128GB Storage)",
-    "product_sku": 19,
-    "image": "https://m.media-amazon.com/images/I/8131pwAojZL._AC_UL320_.jpg",
-    "timestamp": 1534105058000,
-    "ecommerce": {
-        "items": [
-            {
-                "item_name": "Samsung Galaxy S21 FE 5G (Lavender, 8GB, 128GB Storage)",
-                "item_id": 15285,
-                "price": NaN,
-                "item_brand": "Amazon",
-                "item_category": "Electronics",
-                "item_category_2": "tv, audio & cameras",
-                "item_category_3": "All Electronics",
-                "item_category_4": "Electronics",
-                "item_variant": "White",
-                "item_list_name": "Samsung Galaxy S21 FE 5G (Lavender, 8GB, 128GB Storage)",
-                "item_list_id": "SR15285",
-                "index": 15285,
-                "quantity": 2
-            }
-        ]
-    },
-    "client_id": 52393610,
-    "page_previous": "null",
-    "page": "P_74",
-    "event_datetime": 1700524800000
+    "count": 15, 
+    "sku": 10127, 
+    "aisleID": 5,
+    "product_name": "kids' fashion", 
+    "departmentId": 76, 
+    "price": "999", 
+    "recipeID": "Null", 
+    "image": "https://m.media-amazon.com/images/I/71OPLdVur+L._AC_UL320_.jpg", 
+    "timestamp": 1715787062501, 
+    "store_id": 10, 
+    "product_id": 10710
 }
 
-
 {
-    "order_number": "b8be9222-990d-11ea-9c05-42010af00081",
-    "user_id": 998685,
-    "store_id": 1,
-    "returning": false,
-    "time_of_sale": 0,
-    "department_id": 0,
-    "product_id": 4,
-    "product_count": 1,
-    "price": 25.0,
-    "order_id": 0,
-    "order_dow": 0,
-    "order_hour_of_day": 0,
-    "order_woy": 0,
-    "days_since_prior_order": null,
+    "count": 1,
+    "sku": 0,
+    "aisleId": 0,
     "product_name": null,
-    "product_sku": 0,
+    "departmentId": 0,
+    "price": null,
+    "recipeId": null,
     "image": null,
-    "timestamp": 1660157951000,
-    "ecommerce": {
-        "items": [
-            {
-                "item_name": "Donut Friday Scented T-Shirt",
-                "item_id": "67890",
-                "price": 33.75,
-                "item_brand": "Google",
-                "item_category": "Apparel",
-                "item_category_2": "Mens",
-                "item_category_3": "Shirts",
-                "item_category_4": "Tshirts",
-                "item_variant": "Black",
-                "item_list_name": "Search Results",
-                "item_list_id": "SR123",
-                "index": 1,
-                "quantity": 2
-            }
-        ]
-    },
-    "client_id": "1686224283",
-    "page_previous": null,
-    "page": null,
-    "event_datetime": "2022-08-10 06:59:11"
+    "timestamp": 1660149636076,
+    "store_id": 1,
+    "product_id": 10050
 }

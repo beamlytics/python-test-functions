@@ -27,7 +27,7 @@ class StreamProvider(BaseProvider):
             "aisleID": random.randint(1, 100),
             "product_name": df["item_category_2"].iloc[random_index],
             "departmentId": random.randint(1, 100),
-            "price": ((df["price"].iloc[random_index])[1:].replace(',','')),
+            "price": float((df["price"].iloc[random_index])[1:].replace(',','')),
             "recipeID": "Null",
             "image": df["image"].iloc[random_index],
             "timestamp": int((tme.time())*1000),
