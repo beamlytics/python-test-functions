@@ -1,5 +1,4 @@
 import json
-import locale
 import random
 import time as tme
 import uuid
