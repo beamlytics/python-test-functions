@@ -4,7 +4,8 @@ import time as tme
 import uuid
 from datetime import *
 
-#from google.auth import compute_engine
+from google.auth import compute_engine
+
 import google.auth
 import pandas as pd
 from faker import Faker

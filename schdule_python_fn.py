@@ -7,6 +7,8 @@ from datetime import *
 import schedule as sch
 
 import generate_clickstream
+import generate_stock_event
+import generate_transactions
 
 #tme.init()
 
@@ -24,6 +26,18 @@ def generate_browse_event(Event="browse"):
     topic_id = "Clickstream-inbound"
     generate_clickstream.my_func(topic_id,"browse", 1)
 
+def generate_purchase_event(Event="purchase"):
+    topic_id = "Clickstream-inbound"
+    generate_clickstream.my_func(topic_id,"purchase", 1)
+
+
+def generate_stockdata():
+    topic_id = "Inventory-inbound"
+    generate_stock_event.my_func(topic_id,1)
+
+def generate_transactiondata():
+    topic_id = "Transactions-inbound"
+    generate_transactions.my_func(topic_id,1)
 
 
 
@@ -42,6 +56,15 @@ args = parser.parse_args()
 
 if args.Event=='browse' and args.Number > 0:
     sch.every(args.Number).seconds.do(generate_browse_event,Event = args.Event ) 
+
+if args.Event=='purchase' and args.Number > 0:
+    sch.every(args.Number).seconds.do(generate_purchase_event,Event = args.Event ) 
+
+if args.Event == "stock" and args.Number > 0:
+    sch.every(args.Number).seconds.do(generate_stockdata) 
+
+if args.Event == "transaction" and args.Number > 0:
+    sch.every(args.Number).seconds.do(generate_transactiondata) 
 
 while True:
     sch.run_pending()
