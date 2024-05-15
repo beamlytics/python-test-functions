@@ -45,7 +45,7 @@ class StreamProvider(BaseProvider):
                     "items": [{
                         "item_name": df["item_name"].iloc[random_index],
                         "item_id": random_index,  # Generate random item ID (5 digits)
-                        "price": ((df["price"].iloc[random_index])[1:].replace(',','')),
+                        "price": float((df["price"].iloc[random_index])[1:].replace(',','')),
                         "item_brand": "Amazon",  # Fixed brand
                         "item_category": df["item_category"].iloc[random_index],
                         "item_category_2": df["item_category_2"].iloc[random_index],
@@ -62,6 +62,8 @@ class StreamProvider(BaseProvider):
             "page_previous": random.choice(["null", f"P_{random.randint(1, 100)}"]),
             "page": random.choice([f"P_{random.randint(1, 100)}"]),
             "event_datetime": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+            
     }
 
 f.add_provider(StreamProvider)
