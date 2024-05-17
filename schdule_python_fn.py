@@ -9,11 +9,12 @@ import schedule as sch
 import generate_clickstream
 import generate_stock_event
 import generate_transactions
+import generate_purchase_event
 
 #tme.init()
 
 #print(locale.setlocale(locale.LC_NUMERIC, 'en_DK.UTF-8'))
-def generate_browse_event(Event="browse"):
+def generate_browse_event(event="browse"):
     # data={}
     # data["event"]=Event
     # data["event_datetime"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -26,10 +27,18 @@ def generate_browse_event(Event="browse"):
     topic_id = "Clickstream-inbound"
     generate_clickstream.my_func(topic_id,"browse", 1)
 
-def generate_purchase_event(Event="purchase"):
+def generate_direct_purchase_event(Event="purchase"):
     topic_id = "Clickstream-inbound"
     generate_clickstream.my_func(topic_id,"purchase", 1)
 
+def generate_browse_cart_purchase_event(Event= "purchase"):
+    topic_id = "Clickstream-inbound"
+    generate_purchase_event.browse_cart_purchase(topic_id, "purchase",1)
+
+#Browse and add to cart only
+def generate_browse_cart_purchase_event(Event= "purchase"):
+    topic_id = "Clickstream-inbound"
+    generate_purchase_event.browse_cart_purchase(topic_id, "add to cart",1)
 
 def generate_stockdata():
     topic_id = "Inventory-inbound"
@@ -58,7 +67,10 @@ if args.Event=='browse' and args.Number > 0:
     sch.every(args.Number).seconds.do(generate_browse_event,Event = args.Event ) 
 
 if args.Event=='purchase' and args.Number > 0:
-    sch.every(args.Number).seconds.do(generate_purchase_event,Event = args.Event ) 
+    sch.every(args.Number).seconds.do(generate_browse_cart_purchase_event,Event = args.Event ) 
+
+if args.Event=='add to cart' and args.Number > 0:
+    sch.every(args.Number).seconds.do(generate_browse_cart_purchase_event,Event = args.Event ) 
 
 if args.Event == "stock" and args.Number > 0:
     sch.every(args.Number).seconds.do(generate_stockdata) 
