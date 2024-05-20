@@ -120,7 +120,7 @@ def my_func(topic_id,event, number):
           print (data)
           print(publisher)
           print(topic_path)
-          #publish_message(publisher, topic_path, data)
+          publish_message(publisher, topic_path, data)
           print(f"Published {topic_id} data to {topic_path}.")
     except Exception as e:
         print(f"Error publishing message: {e}")

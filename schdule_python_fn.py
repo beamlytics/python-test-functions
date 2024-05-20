@@ -36,7 +36,7 @@ def generate_browse_cart_purchase_event(Event= "purchase"):
     generate_purchase_event.browse_cart_purchase(topic_id, "purchase",1)
 
 #Browse and add to cart only
-def generate_browse_cart_purchase_event(Event= "purchase"):
+def generate_browse_cart_purchase_event(Event= "add to cart"):
     topic_id = "Clickstream-inbound"
     generate_purchase_event.browse_cart_purchase(topic_id, "add to cart",1)
 
