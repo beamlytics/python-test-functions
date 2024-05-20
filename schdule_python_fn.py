@@ -10,6 +10,7 @@ import generate_clickstream
 import generate_stock_event
 import generate_transactions
 import generate_purchase_event
+import generate_air_gap
 
 #tme.init()
 
@@ -30,6 +31,10 @@ def generate_browse_event(event="browse"):
 def generate_direct_purchase_event(Event="purchase"):
     topic_id = "Clickstream-inbound"
     generate_clickstream.my_func(topic_id,"purchase", 1)
+
+def generate_air_gap_event(Event="air_gap"):
+    topic_id = "Clickstream-inbound"
+    generate_air_gap.my_func(topic_id,"browse", 5)
 
 def generate_browse_cart_purchase_event(Event= "purchase"):
     topic_id = "Clickstream-inbound"
@@ -65,6 +70,9 @@ args = parser.parse_args()
 
 if args.Event=='browse' and args.Number > 0:
     sch.every(args.Number).seconds.do(generate_browse_event,Event = args.Event ) 
+
+if args.Event=='air_gap' and args.Number > 0:
+    sch.every(args.Number).seconds.do(generate_air_gap_event,Event = args.Event ) 
 
 if args.Event=='purchase' and args.Number > 0:
     sch.every(args.Number).seconds.do(generate_browse_cart_purchase_event,Event = args.Event ) 
