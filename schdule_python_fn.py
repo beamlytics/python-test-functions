@@ -28,7 +28,7 @@ def generate_browse_event(event="browse"):
     topic_id = "Clickstream-inbound"
     generate_clickstream.my_func(topic_id,"browse", 1)
 
-def generate_direct_purchase_event(Event="purchase"):
+def generate_direct_purchase_event(Event="purchase only"):
     topic_id = "Clickstream-inbound"
     generate_clickstream.my_func(topic_id,"purchase", 1)
 

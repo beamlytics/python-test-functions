@@ -45,7 +45,7 @@ class StreamProvider(BaseProvider):
               12.5683, -6.2603, 24.9354, -9.1393, 10.7522, 14.4378, 46.6753, 103.8198, 18.0686, 21.0122, 
                8.5417, -123.1207, 2.1734, 11.2558, 12.3155, 14.4378, 11.2558, -123.1207, 18.4241, 114.1694
              ]
-        random_loc= random.randint(0,len(latitude_values))
+        random_loc= random.randint(0,len(latitude_values)-1)
 
         return{
             "uid": random.randint(1, 100),

@@ -26,6 +26,7 @@ project_id = "retail-pipeline-beamlytics"
 
 def browse_cart_purchase(topic_id,event, number):
     """Main loop that publishes data to Pub/Sub, receiving the data type as an argument."""
+    event_og = event
     try:
         for i in range(number):
             browse_data = generate_clickstream.get_data("browse")
@@ -47,14 +48,19 @@ def browse_cart_purchase(topic_id,event, number):
         print(f"Published {topic_id} data to {topic_path}.")
         sleep(5)
 
-        browse_data["event"] = event
+    
+        browse_data["event"] = "purchase"
+        print("page_prev",cart_page)
         browse_data["transaction"] = True
 
         browse_data["page_previous"] = cart_page
+        browse_data["page"] = random.choice([f"P_{random.randint(1, 10)}"])
+
         print("Purchase Event",browse_data)
         generate_clickstream.publish_message(publisher, topic_path, browse_data) 
         print(f"Published {topic_id} data to {topic_path}.")
         sleep(10)
+
 
     except Exception as e:
         print(f"Error publishing message: {e}")
